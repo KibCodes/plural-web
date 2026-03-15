@@ -28,7 +28,7 @@ services:
       - "./.env:/app/.env:ro"
       - "./.env.keys:/app/.env.keys:ro"
     depends_on:
-      - dough-back
+      - backend
 
 volumes:
   backend_data:
