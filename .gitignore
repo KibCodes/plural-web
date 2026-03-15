@@ -7,3 +7,4 @@
 .env.keys
 .venv/
 __pycache__/
+dough-data/

@@ -49,9 +49,9 @@ export default function UserEdit() {
     if (url.startsWith('/')) return url;
     
     // Fix URLs with www
-    if (url.includes('www.doughmination.co.uk') && !url.includes('doughmination.co.uk')) {
-      return url.replace('https://www.doughmination.co.uk', 'https://doughmination.co.uk')
-                .replace('http://www.doughmination.co.uk', 'https://doughmination.co.uk');
+    if (url.includes('www.kib.lol') && !url.includes('kib.lol')) {
+      return url.replace('https://www.kib.lol', 'https://kib.lol')
+                .replace('http://www.kib.lol', 'https://kib.lol');
     }
     
     return url;

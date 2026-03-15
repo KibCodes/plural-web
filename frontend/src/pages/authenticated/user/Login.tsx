@@ -87,7 +87,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     if (turnstileLoaded && turnstileRef.current && !widgetId.current) {
       try {
         widgetId.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: '0x4AAAAAAB08ZhSxKn5rAD3d',
+          sitekey: '0x4AAAAAACVZgjR9UOzjriuG',
           callback: (token: string) => {
             setTurnstileToken(token);
             setError(""); // Clear any previous errors

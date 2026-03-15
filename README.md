@@ -131,7 +131,7 @@ The Doughmination System® is built with a Python FastAPI backend and React Type
 
 - **Nginx** - Reverse proxy and static file serving
 - **HTTPS/SSL** - Secure communication
-- **Domain**: doughmination.co.uk
+- **Domain**: kib.lol
 
 ---
 
