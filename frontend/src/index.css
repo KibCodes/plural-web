@@ -765,39 +765,39 @@
   scrollbar-color: hsl(330, 85%, 70%) hsl(220, 15%, 95%);
 }
 
-/* ===== DARK THEME SCROLLBARS (Neon Green) ===== */
+/* ===== DARK THEME SCROLLBARS (Neon Pink/Purple) ===== */
 .dark ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: hsl(0, 0%, 8%); /* Charcoal black background */
+  background: hsl(285, 20%, 7%); /* Dark purple-tinted background */
   border-radius: 6px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: hsl(120, 100%, 35%); /* Darker green (easier on eyes) */
+  background: hsl(300, 90%, 45%); /* Neon magenta */
   border-radius: 6px;
-  border: 2px solid hsl(0, 0%, 8%);
+  border: 2px solid hsl(285, 20%, 7%);
   transition: background-color 0.2s ease;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: hsl(120, 100%, 45%); /* Brighter green on hover */
+  background: hsl(305, 100%, 55%); /* Brighter hover */
 }
 
 .dark ::-webkit-scrollbar-thumb:active {
-  background: hsl(120, 100%, 50%); /* Full neon green when clicking */
+  background: hsl(310, 100%, 65%); /* Bright click */
 }
 
 /* Firefox - Dark Theme */
 .dark {
   scrollbar-width: thin;
-  scrollbar-color: hsl(120, 100%, 35%) hsl(0, 0%, 8%);
+  scrollbar-color: hsl(300, 90%, 45%) hsl(285, 20%, 7%);
 }
 
-/* Ensure scrollbar transitions smoothly when switching themes */
+/* Smooth transitions */
 ::-webkit-scrollbar-thumb {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
