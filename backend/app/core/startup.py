@@ -20,7 +20,7 @@ def startup_tasks():
     These tasks ensure the application is properly configured
     """
     print("=" * 60)
-    print("Starting Doughmination System Backend")
+    print("Starting Meowhem System Backend")
     print("=" * 60)
     
     # Initialize bot access token

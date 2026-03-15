@@ -14,7 +14,7 @@ import "@/eggs/sudoMode";
 
 // Welcome in console
 console.log(`
-%cWelcome to the Doughmination System®!
+%cWelcome to the Meowhem System®!
 
 %c🎨 Looking for easter eggs? You never know where they are! :D
 %c💼 Interested in the code? Check out our GitHub: https://github.com/doughmination/web

@@ -6,7 +6,7 @@ See LICENCE.md in the project root for full licence information.
 
 #!/usr/bin/env python3
 """
-Doughmination System® Backend
+Meowhem System® Backend
 Main application entry point
 """
 
@@ -21,7 +21,7 @@ from app.core.config import get_cors_origins
 
 # Create FastAPI app
 app = FastAPI(
-    title="Doughmination System API",
+    title="Meowhem System API",
     description="Plural system tracker and management API",
     version="2.0.0",
     docs_url=None,

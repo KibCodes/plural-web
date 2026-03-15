@@ -99,7 +99,7 @@ async def websocket_endpoint(websocket: WebSocket):
 @router.get("/robots.txt")
 async def robots_txt():
     """Serve enhanced robots.txt"""
-    robots_content = """# Doughmination System® - Robots.txt
+    robots_content = """# Meowhem System® - Robots.txt
 User-agent: *
 Allow: /
 Crawl-delay: 1
@@ -278,19 +278,19 @@ async def serve_fronting_page(request: Request):
         primary_color = normalize_hex(primary.get("color"))
         primary_avatar = primary.get("avatar_url") or "https://raw.githubusercontent.com/doughmination/Doughmination/main/icon.png"
         primary_description = escape_html(
-            primary.get("description") or "Currently fronting in the Doughmination System®"
+            primary.get("description") or "Currently fronting in the Meowhem System®"
         )
         
         # Create title and description
         if len(fronter_names) == 1:
             title = f"{primary_name} is Fronting"
-            description = f"{primary_name} ({primary_pronouns}) is currently fronting in the Doughmination System®"
+            description = f"{primary_name} ({primary_pronouns}) is currently fronting in the Meowhem System®"
         else:
             fronters_list = ", ".join(fronter_names[:-1]) + f" and {fronter_names[-1]}"
             title = f"{fronters_list} are Fronting"
-            description = f"{fronters_list} are currently co-fronting in the Doughmination System®"
+            description = f"{fronters_list} are currently co-fronting in the Meowhem System®"
         
-        keywords = f"plural system, fronting, current fronters, Doughmination System, {', '.join(fronter_names)}"
+        keywords = f"plural system, fronting, current fronters, Meowhem System, {', '.join(fronter_names)}"
         
         # Structured data
         members_structured = []
@@ -326,7 +326,7 @@ async def serve_fronting_page(request: Request):
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>{title} | Doughmination System®</title>
+    <title>{title} | Meowhem System®</title>
     <meta name="description" content="{description}" />
     <meta name="keywords" content="{keywords}" />
     <meta name="theme-color" content="{primary_color}" />
@@ -372,7 +372,7 @@ async def serve_member_page(member_name: str, request: Request):
         pronouns = escape_html(member.get("pronouns") or "they/them")
         display_name = escape_html(member.get("display_name") or member.get("name"))
         description = escape_html(
-            member.get("description") or f"Member of the Doughmination System®"
+            member.get("description") or f"Member of the Meowhem System®"
         )
         avatar_url = member.get("avatar_url") or "https://raw.githubusercontent.com/doughmination/Doughmination/main/icon.png"
         member_id = member.get("id", "")
@@ -380,7 +380,7 @@ async def serve_member_page(member_name: str, request: Request):
         # Build keywords
         tags = member.get("tags", [])
         tags_text = ", ".join(tags) if tags else ""
-        keywords = f"plural system, {display_name}, system member, Doughmination System, {pronouns}"
+        keywords = f"plural system, {display_name}, system member, Meowhem System, {pronouns}"
         if tags_text:
             keywords += f", {tags_text}"
         
@@ -406,8 +406,8 @@ async def serve_member_page(member_name: str, request: Request):
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>{display_name} ({pronouns}) | Doughmination System®</title>
-    <meta name="description" content="{description} - Member of the Doughmination System®. Pronouns: {pronouns}" />
+    <title>{display_name} ({pronouns}) | Meowhem System®</title>
+    <meta name="description" content="{description} - Member of the Meowhem System®. Pronouns: {pronouns}" />
     <meta name="keywords" content="{keywords}" />
     <meta name="theme-color" content="{color}" />
     <meta property="og:title" content="{display_name} - {pronouns}" />
