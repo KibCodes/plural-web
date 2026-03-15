@@ -1,0 +1,36 @@
+# Copyright (c) 2026 Clove Twilight
+# Licensed under the ESAL-1.3 Licence.
+# See LICENCE.md in the project root for full licence information.
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "127.0.0.1:6000:8000"
+    volumes:
+      - "./dough-data:/app/dough-data"
+      - "./.env:/app/.env:ro"
+      - "./.env.keys:/app/.env.keys:ro"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "127.0.0.1:6001:8001"
+    volumes:
+      - "./.env:/app/.env:ro"
+      - "./.env.keys:/app/.env.keys:ro"
+    depends_on:
+      - dough-back
+
+volumes:
+  backend_data:
+  backend_avatars:
+  
