@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: backend
     ports:
-      - "127.0.0.1:6000:8000"
+      - "127.0.0.1:8000:8000"
     volumes:
       - "./dough-data:/app/dough-data"
       - "./.env:/app/.env:ro"
@@ -23,7 +23,7 @@ services:
     environment:
       - NODE_ENV=production
     ports:
-      - "127.0.0.1:6001:8001"
+      - "127.0.0.1:8001:8001"
     volumes:
       - "./.env:/app/.env:ro"
       - "./.env.keys:/app/.env.keys:ro"
@@ -33,4 +33,3 @@ services:
 volumes:
   backend_data:
   backend_avatars:
-  
